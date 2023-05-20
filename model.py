@@ -16,11 +16,11 @@ df["Admit"] = np.where(df['Chance of Admit '] <= 0.5, 0, 1)
 
 df.columns = df.columns.str.replace(' ', '')
 
-def missing_data(df):
-    total = df.isnull().sum().sort_values(ascending = False)
-    Percentage = (df.isnull().sum()/df.isnull().count()*100).sort_values(ascending = False)
-    return pd.concat([total, Percentage], axis=1, keys=['Total', 'Percentage'])
-missing_data(df)
+# def missing_data(df):
+#     total = df.isnull().sum().sort_values(ascending = False)
+#     Percentage = (df.isnull().sum()/df.isnull().count()*100).sort_values(ascending = False)
+#     return pd.concat([total, Percentage], axis=1, keys=['Total', 'Percentage'])
+# missing_data(df)
 
 df[df.duplicated()]
 
