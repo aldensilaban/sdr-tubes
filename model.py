@@ -9,7 +9,8 @@ from xgboost import XGBClassifier
 
 df = pd.read_csv("Admission_Predict.csv") 
 
-df = del df['Serial No.']
+
+df.drop(columns='Serial No.',inplace = True)
 
 df["Admit"] = np.where(df['Chance of Admit '] <= 0.5, 0, 1)
 
