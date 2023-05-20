@@ -22,7 +22,7 @@ df.columns = df.columns.str.replace(' ', '')
 #     return pd.concat([total, Percentage], axis=1, keys=['Total', 'Percentage'])
 # missing_data(df)
 
-df[df.duplicated()]
+# df[df.duplicated()]
 
 X= df.drop(["ChanceofAdmit", "Admit"],axis =1)
 y= df["Admit"]
